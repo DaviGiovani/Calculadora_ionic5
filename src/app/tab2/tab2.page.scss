@@ -1,0 +1,82 @@
+/* Adicione este código ao seu arquivo de estilo CSS (por exemplo, tab2.page.scss) */
+ion-header {
+    background-color: #20242d; /* Cor de fundo do cabeçalho em modo escuro */
+    color: #ffffff; /* Cor do texto no cabeçalho em modo escuro */
+  }
+  
+  ion-toolbar {
+    --ion-toolbar-background: #20242d; /* Cor de fundo da barra de ferramentas em modo escuro */
+  }
+  
+  ion-title {
+    font-size: 1.5em; /* Tamanho da fonte do título */
+  }
+  
+  ion-content {
+    --ion-background-color: #2c3e50; /* Cor de fundo do conteúdo em modo escuro */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  ion-grid {
+    max-width: 80%; /* Garante que o grid se expandirá para preencher a largura máxima */
+  }
+  
+  ion-col {
+    text-align: center;
+    background-color: #20242d; /* Cor de fundo da coluna em modo escuro */
+    color: #ffffff; /* Cor do texto na coluna em modo escuro */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 10px;
+    flex-direction: row;
+  }
+  
+  h2 {
+    color: #ffffff; /* Cor do título da calculadora em modo escuro */
+  }
+  
+  ion-item {
+    width: 100%;
+    text-align: left;
+  }
+
+  ion-item 
+  
+  ion-label {
+    color: #ffffff; /* Cor do rótulo dos inputs em modo escuro */
+  }
+  
+  ion-input {
+    border: none; /* Borda do input em modo escuro */
+    border-radius: 5px; /* Cantos arredondados */
+  }
+  
+  ion-button {
+    width: 100%;
+    font-size: 16px;
+    --background: #6b3ce9; /* Cor de fundo do botão em modo escuro */
+    --color: #ffffff; /* Cor do texto do botão em modo escuro */
+  }
+  
+  ion-note {
+    color: #ffffff; /* Cor do texto do resultado (nota) em modo escuro */
+  }
+  
+  strong {
+    font-size: 18px;
+    color: #ffffff; /* Cor do texto em modo escuro */
+  }
+  
+  p {
+    font-size: 14px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db; /* Cor do link em modo escuro */
+  }
+  
