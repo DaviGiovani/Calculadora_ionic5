@@ -1,0 +1,100 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Calculadoras </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <!-- Coluna para a Calculadora Padrão -->
+      <ion-col id="calculadora-data">
+        <h2>Calculadora de Data</h2>
+        <ion-item>
+          <ion-label>Resultado = </ion-label>
+          <ion-note>{{ resultadoData }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Data Inicial</ion-label>
+          <ion-input [(ngModel)]="dataInicial" type="date"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Número de Dias</ion-label>
+          <ion-input [(ngModel)]="numeroDias" type="number"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="calcularData()">Calcular</ion-button>
+      </ion-col>
+
+      <!-- Coluna para a Calculadora de Conversão de Unidades -->
+      <ion-col id="calculadora-conversao">
+        <h2>Conversão KM &lt;-> Milhas</h2>
+        <ion-item>
+          <ion-label>Resultado {{resultadoConversao}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Insira o valor</ion-label>
+          <ion-input [(ngModel)]="valor"></ion-input>
+        </ion-item>
+
+        <!-- Unidade de origem -->
+        <ion-item>
+          <ion-label>Unidade de origem</ion-label>
+          <ion-select
+            [(ngModel)]="unidadeOrigem"
+            (ionChange)="atualizarUnidadeDestino()"
+          >
+            <ion-select-option value="" disabled selected
+              >Selecione a unidade</ion-select-option
+            >
+            <ion-select-option value="km">Quilômetros (km)</ion-select-option>
+            <ion-select-option value="mi">Milhas (mi)</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Unidade de destino -->
+        <ion-item>
+          <ion-label>Unidade de destino</ion-label>
+          <ion-select
+            [(ngModel)]="unidadeDestino"
+            (ionChange)="atualizarUnidadeOrigem()"
+          >
+            <ion-select-option value="" disabled selected
+              >Selecione a unidade</ion-select-option
+            >
+            <ion-select-option value="km">Quilômetros (km)</ion-select-option>
+            <ion-select-option value="mi">Milhas (mi)</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-button (click)="converterUnidades()">Converter</ion-button>
+      </ion-col>
+
+      <!-- Coluna para a Calculadora Financeira -->
+      <ion-col id="calculadora-financeira">
+        <h2>Calculadora Financeira</h2>
+        <ion-item>
+          <ion-label>Resultado</ion-label>
+          <ion-note>{{ resultadoJuros }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Montante Inicial</ion-label>
+          <ion-input [(ngModel)]="principal"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Taxa de Juros (ao ano)</ion-label>
+          <ion-input [(ngModel)]="taxaJuros"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Período (anos)</ion-label>
+          <ion-input [(ngModel)]="periodo"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="calcular()">Calcular</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

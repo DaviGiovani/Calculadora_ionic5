@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid id="container">
+    <ion-row>
+      <ion-col>
+        <h3>{{memoria}}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>{{resultado}}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="operadores('%')">%</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="limparEntrada()">CE</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="resetar()">C</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="apagar()">&lt;=</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="reciproco()">1/x</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="quadrado()">x^2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="radiciacao()">√x</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="operadores('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="digitos('7')">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('8')">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('9')">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="operadores('*')">*</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="digitos('4')">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('5')">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('6')">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="operadores('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="digitos('1')">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('2')">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('3')">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="operadores('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="inverterSinal()">+/-</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="digitos('0')">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="adicionarDecimal()">,</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button id="botao-igual" (click)="calcular()">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
